@@ -1,0 +1,41 @@
+body {
+    margin: 2%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+}
+
+header h1 {
+    padding: 1%;
+    letter-spacing: .2rem;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin: 1%;
+    padding: 2%;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+header li:hover {
+    cursor: pointer;
+}
+
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
