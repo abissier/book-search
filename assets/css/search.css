@@ -39,3 +39,9 @@ header li:hover {
     align-items: center;
     border: 1px solid black;
 }
+
+.book-entry {
+    border: 1px solid black;
+    margin: 1%;
+    padding: 1%;
+}
