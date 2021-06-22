@@ -45,3 +45,13 @@ header li:hover {
     margin: 1%;
     padding: 1%;
 }
+
+.book-entry h2 {
+    font-size: 5vh;
+}
+
+.book-entry h5, 
+.book-entry p {
+    font-size: 3vh;
+    font-weight: 300;
+}
