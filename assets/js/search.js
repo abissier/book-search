@@ -19,7 +19,9 @@ function showResults(data) {
 		var h2El = document.createElement('h2');
         var h5El = document.createElement('h5');
         var pEl = document.createElement('p');
+        var pictureEl = document.createElement("picture")
         var imgEl = document.createElement("img");
+        var asideEl = document.createElement("aside");
         var buttonEl = document.createElement('button');
 
         bookEl.classList.add("book-entry");
@@ -35,16 +37,23 @@ function showResults(data) {
         buttonEl.dataset.image = book.volumeInfo.imageLinks.smallThumbnail
 
 		bookResults.append(bookEl);
-		bookEl.appendChild(h2El);
-        bookEl.appendChild(h5El);
-		bookEl.appendChild(pEl);
-        bookEl.appendChild(imgEl);
-        bookEl.appendChild(buttonEl);
+        bookEl.appendChild(pictureEl);
+        pictureEl.appendChild(imgEl);
+
+        bookEl.appendChild(asideEl);
+		asideEl.appendChild(h2El);
+        asideEl.appendChild(h5El);
+		asideEl.appendChild(pEl);
+        asideEl.appendChild(buttonEl);
 
         buttonEl.addEventListener("click", saveBook);
 	});
 }
 
 function saveBook(event){
-    localStorage.setItem(event.target.dataset.infoLink, event.target.dataset.image)
+    var book = {
+        "img":event.target.dataset.image,
+        "link":event.target.dataset.infoLink
+    }
+    localStorage.setItem("book", JSON.stringify(book))
 }
