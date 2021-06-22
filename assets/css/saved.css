@@ -1,0 +1,19 @@
+.saved-book {
+    width: 300px;
+    margin: 2%;
+}
+
+.delete-btn {
+    position: absolute;
+    left: 100px;
+}
+
+@media screen and (min-width: 565px) {
+    .book-results {
+        display: flex;
+        flex-direction: row;
+    }
+    .delete-btn {
+        left: initial;
+    }
+}
